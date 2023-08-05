@@ -57,16 +57,12 @@ class _CacheManagerPanelState extends State<CacheManagerPanel> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text("Cache Manager",
-                  style: Theme.of(context)
-                      .textTheme
-                      .headline6!
-                      .copyWith(color: Theme.of(context).accentColor)),
+                  style: Theme.of(context).textTheme.headline6!.copyWith(
+                      color: Theme.of(context).colorScheme.secondary)),
               Container(height: 50),
               Text("1. Choose mode:",
-                  style: Theme.of(context)
-                      .textTheme
-                      .subtitle2!
-                      .copyWith(color: Theme.of(context).accentColor)),
+                  style: Theme.of(context).textTheme.subtitle2!.copyWith(
+                      color: Theme.of(context).colorScheme.secondary)),
               DropdownButton<_Mode>(
                   value: _mode,
                   onChanged: (value) => setState(() => _mode = value),
@@ -87,10 +83,8 @@ class _CacheManagerPanelState extends State<CacheManagerPanel> {
               for (var w in getSubKeyViews(context)) w,
               Container(height: 20),
               Text("${getLabel()}. to clear",
-                  style: Theme.of(context)
-                      .textTheme
-                      .subtitle2!
-                      .copyWith(color: Theme.of(context).accentColor)),
+                  style: Theme.of(context).textTheme.subtitle2!.copyWith(
+                      color: Theme.of(context).colorScheme.secondary)),
               Padding(
                   padding: EdgeInsets.all(10),
                   child: FloatingActionButton(
@@ -133,7 +127,7 @@ class _CacheManagerPanelState extends State<CacheManagerPanel> {
           style: Theme.of(context)
               .textTheme
               .subtitle2!
-              .copyWith(color: Theme.of(context).accentColor)),
+              .copyWith(color: Theme.of(context).colorScheme.secondary)),
       TextField(
           controller: _requestMethodController,
           style: Theme.of(context).textTheme.bodyText1),
@@ -149,7 +143,7 @@ class _CacheManagerPanelState extends State<CacheManagerPanel> {
           style: Theme.of(context)
               .textTheme
               .subtitle2!
-              .copyWith(color: Theme.of(context).accentColor)),
+              .copyWith(color: Theme.of(context).colorScheme.secondary)),
       TextField(
           controller: _keyController,
           style: Theme.of(context).textTheme.bodyText1),
@@ -165,7 +159,7 @@ class _CacheManagerPanelState extends State<CacheManagerPanel> {
           style: Theme.of(context)
               .textTheme
               .subtitle2!
-              .copyWith(color: Theme.of(context).accentColor)),
+              .copyWith(color: Theme.of(context).colorScheme.secondary)),
       TextField(
           controller: _subKeyController,
           style: Theme.of(context).textTheme.bodyText1),
